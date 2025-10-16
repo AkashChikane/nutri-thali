@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Fitness Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff9f0;
+            min-height: 100vh;
+            box-shadow: 0 0 40px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .tabs {
+            display: flex;
+            background: white;
+            border-bottom: 2px solid #ffe0cc;
+            position: sticky;
+            top: 87px;
+            z-index: 99;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 16px;
+            text-align: center;
+            background: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .tab.active {
+            color: #ff6b6b;
+            border-bottom: 3px solid #ff6b6b;
+            font-weight: 700;
+            background: linear-gradient(to bottom, #fff9f0 0%, white 100%);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.3s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .date-selector {
+            background: white;
+            padding: 18px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.15);
+            border: 2px solid #ffe0cc;
+        }
+
+        .date-selector input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #ffe0cc;
+            border-radius: 12px;
+            font-size: 15px;
+            margin: 0 10px;
+            font-weight: 600;
+            color: #ff6b6b;
+            background: #fff9f0;
+            transition: all 0.3s;
+        }
+
+        .date-selector input:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+        }
+
+        .date-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        .date-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .date-btn:active {
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            padding: 24px 20px;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.35);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transition: all 0.5s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .stat-card .label {
+            font-size: 13px;
+            opacity: 0.95;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-card .target {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            background: rgba(255,255,255,0.25);
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 12px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .progress-fill {
+            background: white;
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.5s ease-out;
+            box-shadow: 0 2px 8px rgba(255,255,255,0.3);
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            border: 2px solid #ffe0cc;
+            border-radius: 16px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background: white;
+            font-weight: 500;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.15);
+            background: #fff9f0;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .food-list {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid #ffe0cc;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+        }
+
+        .food-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .food-list::-webkit-scrollbar-track {
+            background: #fff9f0;
+            border-radius: 10px;
+        }
+
+        .food-list::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            border-radius: 10px;
+        }
+
+        .food-item {
+            padding: 18px;
+            border-bottom: 1px solid #ffe0cc;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .food-item:hover {
+            background: linear-gradient(to right, #fff9f0 0%, #fff5e6 100%);
+            transform: translateX(4px);
+        }
+
+        .food-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-name {
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .food-stats {
+            font-size: 13px;
+            color: #636e72;
+            font-weight: 500;
+        }
+
+        .add-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+            font-weight: bold;
+        }
+
+        .add-btn:hover {
+            transform: scale(1.15) rotate(90deg);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+        }
+
+        .add-btn:active {
+            transform: scale(1.05) rotate(90deg);
+        }
+
+        .consumed-list {
+            margin-top: 20px;
+        }
+
+        .consumed-item {
+            background: white;
+            padding: 18px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 0.4s ease-out;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.12);
+            border: 2px solid #ffe0cc;
+            transition: all 0.3s;
+        }
+
+        .consumed-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.18);
+        }
+
+        @keyframes slideIn {
+            from { 
+                transform: translateX(-30px); 
+                opacity: 0; 
+            }
+            to { 
+                transform: translateX(0); 
+                opacity: 1; 
+            }
+        }
+
+        .consumed-item .info {
+            flex: 1;
+        }
+
+        .remove-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        .remove-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(255, 107, 107, 0.4);
+        }
+
+        .remove-btn:active {
+            transform: scale(0.95);
+        }
+
+        .streak-card {
+            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            padding: 35px 25px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(254, 202, 87, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .streak-card::before {
+            content: '🔥';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            transform: rotate(15deg);
+        }
+
+        .streak-number {
+            font-size: 80px;
+            font-weight: 900;
+            margin: 25px 0;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .streak-label {
+            font-size: 18px;
+            opacity: 0.95;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .chart-container {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
+            border: 2px solid #ffe0cc;
+        }
+
+        .chart-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3436;
+            letter-spacing: -0.5px;
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 200px;
+            margin: 20px 0;
+            padding: 0 5px;
+        }
+
+        .bar {
+            flex: 1;
+            margin: 0 6px;
+            background: linear-gradient(to top, #ff6b6b, #feca57);
+            border-radius: 12px 12px 0 0;
+            position: relative;
+            min-height: 10px;
+            transition: all 0.4s ease-out;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .bar:hover {
+            opacity: 0.85;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #636e72;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            font-weight: 700;
+            color: #ff6b6b;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .achievement {
+            background: white;
+            padding: 24px 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 3px solid #ffe0cc;
+            transition: all 0.3s;
+            opacity: 0.6;
+            filter: grayscale(100%);
+        }
+
+        .achievement.unlocked {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-color: #fdcb6e;
+            opacity: 1;
+            filter: grayscale(0%);
+            box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
+            animation: unlock 0.5s ease-out;
+        }
+
+        @keyframes unlock {
+            0% { transform: scale(0.8) rotate(-10deg); opacity: 0; }
+            50% { transform: scale(1.1) rotate(5deg); }
+            100% { transform: scale(1) rotate(0); opacity: 1; }
+        }
+
+        .achievement:hover {
+            transform: translateY(-4px);
+        }
+
+        .achievement-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .achievement-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2d3436;
+            letter-spacing: -0.3px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            color: #b2bec3;
+        }
+
+        .empty-state-icon {
+            font-size: 70px;
+            margin-bottom: 18px;
+            opacity: 0.7;
+        }
+
+        .empty-state p {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+
+        .badge.success {
+            background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+            color: white;
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            color: #2d3436;
+        }
+
+        .badge.danger {
+            background: linear-gradient(135deg, #ff7675 0%, #d63031 100%);
+            color: white;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d3436;
+            letter-spacing: -0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔥 Fitness Journey</h1>
+            <p class="subtitle">Track your food, crush your goals!</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('log')">📝 Log Food</button>
+            <button class="tab" onclick="switchTab('trends')">📊 Trends</button>
+        </div>
+
+        <div id="log-tab" class="tab-content active">
+            <div class="date-selector">
+                <button class="date-btn" onclick="changeDate(-1)">◀</button>
+                <input type="date" id="selected-date" onchange="loadDayData()">
+                <button class="date-btn" onclick="changeDate(1)">▶</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">🔥 Calories</div>
+                    <div class="value" id="calories-value">0</div>
+                    <div class="target">/ 2200 kcal</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="calories-progress"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">💪 Protein</div>
+                    <div class="value" id="protein-value">0</div>
+                    <div class="target">grams</div>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search food items..." oninput="filterFoodItems()">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="food-list" id="food-list"></div>
+
+            <h3 style="margin: 20px 0 10px; color: #333;">Today's Log</h3>
+            <div class="consumed-list" id="consumed-list"></div>
+        </div>
+
+        <div id="trends-tab" class="tab-content">
+            <div class="streak-card">
+                <div class="streak-label">Current Streak 🔥</div>
+                <div class="streak-number" id="streak-number">0</div>
+                <div class="streak-label">Days of consistency!</div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">📈 Last 7 Days - Calories</div>
+                <div class="bar-chart" id="calories-chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">💪 Last 7 Days - Protein</div>
+                <div class="bar-chart" id="protein-chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">🏆 Achievements</div>
+                <div class="achievement-grid" id="achievements"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let foodItems = [];
+        let consumedData = {};
+        const CALORIE_TARGET = 2200;
+
+        // Load food database
+        fetch('items.json')
+            .then(response => response.json())
+            .then(data => {
+                foodItems = data.food_items;
+                renderFoodList();
+            });
+
+        // Initialize
+        document.getElementById('selected-date').valueAsDate = new Date();
+        loadFromLocalStorage();
+        loadDayData();
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            if (tab === 'log') {
+                document.querySelectorAll('.tab')[0].classList.add('active');
+                document.getElementById('log-tab').classList.add('active');
+            } else {
+                document.querySelectorAll('.tab')[1].classList.add('active');
+                document.getElementById('trends-tab').classList.add('active');
+                renderTrends();
+            }
+        }
+
+        function changeDate(days) {
+            const dateInput = document.getElementById('selected-date');
+            const currentDate = new Date(dateInput.value);
+            currentDate.setDate(currentDate.getDate() + days);
+            dateInput.valueAsDate = currentDate;
+            loadDayData();
+        }
+
+        function getSelectedDate() {
+            return document.getElementById('selected-date').value;
+        }
+
+        function loadDayData() {
+            const date = getSelectedDate();
+            renderConsumedItems();
+            updateStats();
+        }
+
+        function renderFoodList() {
+            const foodList = document.getElementById('food-list');
+            foodList.innerHTML = foodItems.map(item => `
+                <div class="food-item" onclick="addFood('${item.name.replace(/'/g, "\\'")}')">
+                    <div>
+                        <div class="food-name">${item.name}</div>
+                        <div class="food-stats">🔥 ${item.calorie_count} cal | 💪 ${item.protein_g}g protein</div>
+                    </div>
+                    <button class="add-btn" onclick="event.stopPropagation(); addFood('${item.name.replace(/'/g, "\\'")}')">+</button>
+                </div>
+            `).join('');
+        }
+
+        function filterFoodItems() {
+            const search = document.getElementById('search-input').value.toLowerCase();
+            const filtered = foodItems.filter(item => 
+                item.name.toLowerCase().includes(search)
+            );
+            
+            const foodList = document.getElementById('food-list');
+            foodList.innerHTML = filtered.map(item => `
+                <div class="food-item" onclick="addFood('${item.name.replace(/'/g, "\\'")}')">
+                    <div>
+                        <div class="food-name">${item.name}</div>
+                        <div class="food-stats">🔥 ${item.calorie_count} cal | 💪 ${item.protein_g}g protein</div>
+                    </div>
+                    <button class="add-btn" onclick="event.stopPropagation(); addFood('${item.name.replace(/'/g, "\\'")}')">+</button>
+                </div>
+            `).join('');
+        }
+
+        function addFood(foodName) {
+            const date = getSelectedDate();
+            if (!consumedData[date]) {
+                consumedData[date] = [];
+            }
+            
+            const food = foodItems.find(f => f.name === foodName);
+            if (food) {
+                consumedData[date].push({
+                    ...food,
+                    id: Date.now()
+                });
+                saveToLocalStorage();
+                renderConsumedItems();
+                updateStats();
+            }
+        }
+
+        function removeFood(id) {
+            const date = getSelectedDate();
+            if (consumedData[date]) {
+                consumedData[date] = consumedData[date].filter(item => item.id !== id);
+                saveToLocalStorage();
+                renderConsumedItems();
+                updateStats();
+            }
+        }
+
+        function renderConsumedItems() {
+            const date = getSelectedDate();
+            const items = consumedData[date] || [];
+            const consumedList = document.getElementById('consumed-list');
+            
+            if (items.length === 0) {
+                consumedList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🍽️</div>
+                        <p>No food logged yet for this day</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            consumedList.innerHTML = items.map(item => `
+                <div class="consumed-item">
+                    <div class="info">
+                        <div class="food-name">${item.name}</div>
+                        <div class="food-stats">🔥 ${item.calorie_count} cal | 💪 ${item.protein_g}g protein</div>
+                    </div>
+                    <button class="remove-btn" onclick="removeFood(${item.id})">✕</button>
+                </div>
+            `).join('');
+        }
+
+        function updateStats() {
+            const date = getSelectedDate();
+            const items = consumedData[date] || [];
+            
+            const totalCalories = items.reduce((sum, item) => sum + item.calorie_count, 0);
+            const totalProtein = items.reduce((sum, item) => sum + item.protein_g, 0);
+            
+            document.getElementById('calories-value').textContent = totalCalories;
+            document.getElementById('protein-value').textContent = totalProtein.toFixed(1);
+            
+            const caloriesProgress = Math.min((totalCalories / CALORIE_TARGET) * 100, 100);
+            document.getElementById('calories-progress').style.width = caloriesProgress + '%';
+        }
+
+        function renderTrends() {
+            renderStreak();
+            renderCaloriesChart();
+            renderProteinChart();
+            renderAchievements();
+        }
+
+        function renderStreak() {
+            let streak = 0;
+            const today = new Date();
+            
+            for (let i = 0; i < 365; i++) {
+                const checkDate = new Date(today);
+                checkDate.setDate(checkDate.getDate() - i);
+                const dateStr = checkDate.toISOString().split('T')[0];
+                
+                const dayData = consumedData[dateStr] || [];
+                const totalCalories = dayData.reduce((sum, item) => sum + item.calorie_count, 0);
+                
+                if (totalCalories >= CALORIE_TARGET * 0.8) {
+                    streak++;
+                } else {
+                    break;
+                }
+            }
+            
+            document.getElementById('streak-number').textContent = streak;
+        }
+
+        function renderCaloriesChart() {
+            const chart = document.getElementById('calories-chart');
+            const bars = [];
+            
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                const dayData = consumedData[dateStr] || [];
+                const totalCalories = dayData.reduce((sum, item) => sum + item.calorie_count, 0);
+                
+                const height = Math.min((totalCalories / CALORIE_TARGET) * 100, 100);
+                const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+                
+                bars.push(`
+                    <div class="bar" style="height: ${height}%">
+                        <div class="bar-value">${totalCalories}</div>
+                        <div class="bar-label">${dayName}</div>
+                    </div>
+                `);
+            }
+            
+            chart.innerHTML = bars.join('');
+        }
+
+        function renderProteinChart() {
+            const chart = document.getElementById('protein-chart');
+            const bars = [];
+            let maxProtein = 100;
+            
+            // Find max protein for scaling
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                const dayData = consumedData[dateStr] || [];
+                const totalProtein = dayData.reduce((sum, item) => sum + item.protein_g, 0);
+                maxProtein = Math.max(maxProtein, totalProtein);
+            }
+            
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                const dayData = consumedData[dateStr] || [];
+                const totalProtein = dayData.reduce((sum, item) => sum + item.protein_g, 0);
+                
+                const height = (totalProtein / maxProtein) * 100;
+                const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+                
+                bars.push(`
+                    <div class="bar" style="height: ${height}%">
+                        <div class="bar-value">${totalProtein.toFixed(0)}g</div>
+                        <div class="bar-label">${dayName}</div>
+                    </div>
+                `);
+            }
+            
+            chart.innerHTML = bars.join('');
+        }
+
+        function renderAchievements() {
+            const achievements = [
+                { icon: '🎯', name: 'First Entry', check: () => Object.keys(consumedData).length > 0 },
+                { icon: '🔥', name: '3 Day Streak', check: () => calculateStreak() >= 3 },
+                { icon: '⭐', name: '7 Day Streak', check: () => calculateStreak() >= 7 },
+                { icon: '💎', name: '30 Day Streak', check: () => calculateStreak() >= 30 },
+                { icon: '🏆', name: 'Perfect Week', check: () => checkPerfectWeek() },
+                { icon: '💪', name: 'Protein King', check: () => checkHighProteinDay() }
+            ];
+            
+            const container = document.getElementById('achievements');
+            container.innerHTML = achievements.map(ach => `
+                <div class="achievement ${ach.check() ? 'unlocked' : ''}">
+                    <div class="achievement-icon">${ach.icon}</div>
+                    <div class="achievement-name">${ach.name}</div>
+                </div>
+            `).join('');
+        }
+
+        function calculateStreak() {
+            let streak = 0;
+            const today = new Date();
+            
+            for (let i = 0; i < 365; i++) {
+                const checkDate = new Date(today);
+                checkDate.setDate(checkDate.getDate() - i);
+                const dateStr = checkDate.toISOString().split('T')[0];
+                
+                const dayData = consumedData[dateStr] || [];
+                const totalCalories = dayData.reduce((sum, item) => sum + item.calorie_count, 0);
+                
+                if (totalCalories >= CALORIE_TARGET * 0.8) {
+                    streak++;
+                } else {
+                    break;
+                }
+            }
+            
+            return streak;
+        }
+
+        function checkPerfectWeek() {
+            let perfectDays = 0;
+            for (let i = 0; i < 7; i++) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                const dayData = consumedData[dateStr] || [];
+                const totalCalories = dayData.reduce((sum, item) => sum + item.calorie_count, 0);
+                
+                if (totalCalories >= CALORIE_TARGET * 0.9 && totalCalories <= CALORIE_TARGET * 1.1) {
+                    perfectDays++;
+                }
+            }
+            return perfectDays >= 7;
+        }
+
+        function checkHighProteinDay() {
+            for (let dateStr in consumedData) {
+                const dayData = consumedData[dateStr];
+                const totalProtein = dayData.reduce((sum, item) => sum + item.protein_g, 0);
+                if (totalProtein >= 100) return true;
+            }
+            return false;
+        }
+
+        function saveToLocalStorage() {
+            localStorage.setItem('consumedData', JSON.stringify(consumedData));
+        }
+
+        function loadFromLocalStorage() {
+            const stored = localStorage.getItem('consumedData');
+            if (stored) {
+                consumedData = JSON.parse(stored);
+            }
+        }
+    </script>
+</body>
+</html>

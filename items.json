@@ -1,0 +1,1239 @@
+{
+  "food_items": [
+    {
+      "name": "Poha (1 plate)",
+      "calorie_count": 270,
+      "protein_g": 4.5
+    },
+    {
+      "name": "Upma (1 bowl)",
+      "calorie_count": 250,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Sabudana Khichdi (1 plate)",
+      "calorie_count": 380,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Vada Pav (1 piece)",
+      "calorie_count": 290,
+      "protein_g": 6.5
+    },
+    {
+      "name": "Misal Pav (1 plate with 2 pav)",
+      "calorie_count": 450,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Kanda Bhaji / Pakora (1 plate, 6-7 pieces)",
+      "calorie_count": 250,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Batata Vada (1 piece)",
+      "calorie_count": 150,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Thalipeeth (1 medium piece with butter)",
+      "calorie_count": 200,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Puran Poli (1 medium)",
+      "calorie_count": 290,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Shira / Sooji Halwa (1 bowl)",
+      "calorie_count": 350,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Chapati / Roti (1 medium)",
+      "calorie_count": 85,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Phulka (1 medium, no ghee)",
+      "calorie_count": 70,
+      "protein_g": 2.5
+    },
+    {
+      "name": "Jowar Bhakri (1 medium)",
+      "calorie_count": 100,
+      "protein_g": 3.2
+    },
+    {
+      "name": "Bajra Bhakri (1 medium)",
+      "calorie_count": 120,
+      "protein_g": 3.5
+    },
+    {
+      "name": "Naan (1 medium)",
+      "calorie_count": 260,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Butter Naan (1 medium)",
+      "calorie_count": 310,
+      "protein_g": 8.5
+    },
+    {
+      "name": "Plain Paratha (1 medium)",
+      "calorie_count": 180,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Aloo Paratha (1 medium with oil)",
+      "calorie_count": 290,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Paneer Paratha (1 medium)",
+      "calorie_count": 320,
+      "protein_g": 12.0
+    },
+    {
+      "name": "Puri (1 medium piece)",
+      "calorie_count": 75,
+      "protein_g": 1.5
+    },
+    {
+      "name": "Cooked White Rice (1 cup, approx 150g)",
+      "calorie_count": 205,
+      "protein_g": 4.3
+    },
+    {
+      "name": "Cooked Brown Rice (1 cup, approx 150g)",
+      "calorie_count": 180,
+      "protein_g": 4.5
+    },
+    {
+      "name": "Jeera Rice (1 cup)",
+      "calorie_count": 240,
+      "protein_g": 4.8
+    },
+    {
+      "name": "Veg Pulao (1 plate)",
+      "calorie_count": 350,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Paneer Pulao (1 plate)",
+      "calorie_count": 420,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Chicken Biryani (1 plate)",
+      "calorie_count": 480,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Egg Biryani (1 plate with 2 eggs)",
+      "calorie_count": 450,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Dal Tadka (1 bowl)",
+      "calorie_count": 180,
+      "protein_g": 9.0
+    },
+    {
+      "name": "Dal Fry (1 bowl)",
+      "calorie_count": 200,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Dal Makhani (1 bowl)",
+      "calorie_count": 280,
+      "protein_g": 12.0
+    },
+    {
+      "name": "Varan Bhaat (1 serving)",
+      "calorie_count": 300,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Pithla (1 bowl)",
+      "calorie_count": 150,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Sambar (1 bowl)",
+      "calorie_count": 120,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Rasam (1 bowl)",
+      "calorie_count": 70,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Chole / Chana Masala (1 bowl)",
+      "calorie_count": 250,
+      "protein_g": 12.0
+    },
+    {
+      "name": "Rajma Masala (1 bowl)",
+      "calorie_count": 280,
+      "protein_g": 14.0
+    },
+    {
+      "name": "Aloo Gobi Sabzi (1 serving)",
+      "calorie_count": 160,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Bhindi Masala (1 serving)",
+      "calorie_count": 140,
+      "protein_g": 3.5
+    },
+    {
+      "name": "Baingan Bharta (1 serving)",
+      "calorie_count": 130,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Mixed Vegetable Sabzi (1 serving)",
+      "calorie_count": 150,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Paneer Butter Masala (1 serving)",
+      "calorie_count": 350,
+      "protein_g": 18.0
+    },
+    {
+      "name": "Palak Paneer (1 serving)",
+      "calorie_count": 300,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Kadai Paneer (1 serving)",
+      "calorie_count": 320,
+      "protein_g": 17.0
+    },
+    {
+      "name": "Matar Paneer (1 serving)",
+      "calorie_count": 280,
+      "protein_g": 16.0
+    },
+    {
+      "name": "Malai Kofta (1 serving, 2 koftas)",
+      "calorie_count": 380,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Veg Kolhapuri (1 serving)",
+      "calorie_count": 250,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Shev Bhaji (1 serving)",
+      "calorie_count": 300,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Bharli Vangi (Stuffed Brinjal) (1 serving)",
+      "calorie_count": 220,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Butter Chicken (1 serving)",
+      "calorie_count": 450,
+      "protein_g": 30.0
+    },
+    {
+      "name": "Chicken Tikka Masala (1 serving)",
+      "calorie_count": 400,
+      "protein_g": 28.0
+    },
+    {
+      "name": "Kadai Chicken (1 serving)",
+      "calorie_count": 350,
+      "protein_g": 27.0
+    },
+    {
+      "name": "Chicken Curry (Homestyle) (1 serving)",
+      "calorie_count": 300,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Chicken Kolhapuri (1 serving)",
+      "calorie_count": 380,
+      "protein_g": 26.0
+    },
+    {
+      "name": "Tandoori Chicken (1 quarter)",
+      "calorie_count": 280,
+      "protein_g": 35.0
+    },
+    {
+      "name": "Chicken Tikka (6 pieces)",
+      "calorie_count": 250,
+      "protein_g": 30.0
+    },
+    {
+      "name": "Chicken Korma (1 serving)",
+      "calorie_count": 420,
+      "protein_g": 28.0
+    },
+    {
+      "name": "Chilli Chicken (Dry, 1 plate)",
+      "calorie_count": 350,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Chilli Chicken (Gravy, 1 serving)",
+      "calorie_count": 380,
+      "protein_g": 24.0
+    },
+    {
+      "name": "Chicken 65 (1 plate)",
+      "calorie_count": 360,
+      "protein_g": 26.0
+    },
+    {
+      "name": "Egg Curry (2 eggs)",
+      "calorie_count": 300,
+      "protein_g": 18.0
+    },
+    {
+      "name": "Egg Bhurji (2 eggs)",
+      "calorie_count": 220,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Boiled Egg (1 large)",
+      "calorie_count": 78,
+      "protein_g": 6.3
+    },
+    {
+      "name": "Fried Egg (1 large)",
+      "calorie_count": 90,
+      "protein_g": 6.2
+    },
+    {
+      "name": "Omelette (2 eggs)",
+      "calorie_count": 180,
+      "protein_g": 13.0
+    },
+    {
+      "name": "Masala Omelette (2 eggs)",
+      "calorie_count": 200,
+      "protein_g": 14.0
+    },
+    {
+      "name": "Idli (2 pieces with chutney/sambar)",
+      "calorie_count": 200,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Medu Vada (2 pieces with chutney/sambar)",
+      "calorie_count": 350,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Plain Dosa (1 piece with chutney/sambar)",
+      "calorie_count": 250,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Masala Dosa (1 piece with chutney/sambar)",
+      "calorie_count": 400,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Rava Dosa (1 piece)",
+      "calorie_count": 280,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Uttapam (1 piece)",
+      "calorie_count": 250,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Pani Puri / Golgappe (1 plate, 6 pieces)",
+      "calorie_count": 180,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Bhel Puri (1 plate)",
+      "calorie_count": 350,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Sev Puri (1 plate, 6-7 pieces)",
+      "calorie_count": 320,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Dahi Puri (1 plate, 6-7 pieces)",
+      "calorie_count": 300,
+      "protein_g": 9.0
+    },
+    {
+      "name": "Ragda Pattice (1 plate)",
+      "calorie_count": 380,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Dabeli (1 piece)",
+      "calorie_count": 280,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Samosa (1 piece)",
+      "calorie_count": 260,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Kachori (1 piece)",
+      "calorie_count": 240,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Veg Hakka Noodles (1 plate)",
+      "calorie_count": 400,
+      "protein_g": 12.0
+    },
+    {
+      "name": "Egg Hakka Noodles (1 plate)",
+      "calorie_count": 450,
+      "protein_g": 18.0
+    },
+    {
+      "name": "Chicken Hakka Noodles (1 plate)",
+      "calorie_count": 500,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Veg Fried Rice (1 plate)",
+      "calorie_count": 380,
+      "protein_g": 9.0
+    },
+    {
+      "name": "Egg Fried Rice (1 plate)",
+      "calorie_count": 430,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Chicken Fried Rice (1 plate)",
+      "calorie_count": 480,
+      "protein_g": 22.0
+    },
+    {
+      "name": "Gobi Manchurian (Dry, 1 plate)",
+      "calorie_count": 300,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Gobi Manchurian (Gravy, 1 serving)",
+      "calorie_count": 320,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Veg Manchurian (Dry, 1 plate)",
+      "calorie_count": 280,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Paneer Chilli (Dry, 1 plate)",
+      "calorie_count": 380,
+      "protein_g": 18.0
+    },
+    {
+      "name": "Veg Spring Roll (2 pieces)",
+      "calorie_count": 250,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Veg Momos (Steamed, 6 pieces)",
+      "calorie_count": 200,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Chicken Momos (Steamed, 6 pieces)",
+      "calorie_count": 250,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Veg Sandwich (Plain)",
+      "calorie_count": 250,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Grilled Cheese Sandwich",
+      "calorie_count": 350,
+      "protein_g": 12.0
+    },
+    {
+      "name": "Chicken Sandwich",
+      "calorie_count": 380,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Veg Burger",
+      "calorie_count": 350,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Chicken Burger",
+      "calorie_count": 450,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Margherita Pizza (1 slice)",
+      "calorie_count": 200,
+      "protein_g": 9.0
+    },
+    {
+      "name": "Veggie Pizza (1 slice)",
+      "calorie_count": 220,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Chicken Pizza (1 slice)",
+      "calorie_count": 260,
+      "protein_g": 15.0
+    },
+    {
+      "name": "French Fries (medium serving)",
+      "calorie_count": 320,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Curd / Dahi (1 bowl, 100g)",
+      "calorie_count": 100,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Raita (Boondi/Veg, 1 bowl)",
+      "calorie_count": 120,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Green Salad (cucumber, tomato, onion)",
+      "calorie_count": 50,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Papad (Roasted)",
+      "calorie_count": 45,
+      "protein_g": 2.5
+    },
+    {
+      "name": "Papad (Fried)",
+      "calorie_count": 80,
+      "protein_g": 2.5
+    },
+    {
+      "name": "Pickle (Achar, 1 tbsp)",
+      "calorie_count": 30,
+      "protein_g": 0.2
+    },
+    {
+      "name": "Gulab Jamun (2 pieces)",
+      "calorie_count": 300,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Jalebi (2 pieces)",
+      "calorie_count": 250,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Rasgulla (2 pieces)",
+      "calorie_count": 220,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Kheer / Payasam (1 bowl)",
+      "calorie_count": 250,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Gajar ka Halwa (1 bowl)",
+      "calorie_count": 300,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Shrikhand (1 bowl)",
+      "calorie_count": 280,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Amrakhand (1 bowl)",
+      "calorie_count": 300,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Modak (Steamed, 1 piece)",
+      "calorie_count": 130,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Basundi (1 bowl)",
+      "calorie_count": 350,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Fruit Salad (1 bowl)",
+      "calorie_count": 120,
+      "protein_g": 1.5
+    },
+    {
+      "name": "Fruit Custard (1 bowl)",
+      "calorie_count": 200,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Ice Cream (1 scoop)",
+      "calorie_count": 150,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Kulfi (1 stick)",
+      "calorie_count": 200,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Chai / Tea with milk & sugar (1 cup)",
+      "calorie_count": 70,
+      "protein_g": 1.5
+    },
+    {
+      "name": "Black Tea (1 cup)",
+      "calorie_count": 2,
+      "protein_g": 0.0
+    },
+    {
+      "name": "Green Tea (1 cup)",
+      "calorie_count": 2,
+      "protein_g": 0.0
+    },
+    {
+      "name": "Coffee with milk & sugar (1 cup)",
+      "calorie_count": 90,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Black Coffee (1 cup)",
+      "calorie_count": 2,
+      "protein_g": 0.1
+    },
+    {
+      "name": "Lassi (Sweet, 1 glass)",
+      "calorie_count": 180,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Mango Lassi (1 glass)",
+      "calorie_count": 220,
+      "protein_g": 6.5
+    },
+    {
+      "name": "Buttermilk / Chaas (Salted, 1 glass)",
+      "calorie_count": 40,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Masala Chaas (1 glass)",
+      "calorie_count": 45,
+      "protein_g": 2.1
+    },
+    {
+      "name": "Nimbu Pani / Lemonade (Sweet & Salty, 1 glass)",
+      "calorie_count": 50,
+      "protein_g": 0.1
+    },
+    {
+      "name": "Apple (1 medium)",
+      "calorie_count": 95,
+      "protein_g": 0.5
+    },
+    {
+      "name": "Banana (1 medium)",
+      "calorie_count": 105,
+      "protein_g": 1.3
+    },
+    {
+      "name": "Mango (1 cup slices)",
+      "calorie_count": 100,
+      "protein_g": 1.4
+    },
+    {
+      "name": "Orange (1 medium)",
+      "calorie_count": 62,
+      "protein_g": 1.2
+    },
+    {
+      "name": "Grapes (1 cup)",
+      "calorie_count": 104,
+      "protein_g": 1.1
+    },
+    {
+      "name": "Watermelon (1 cup diced)",
+      "calorie_count": 46,
+      "protein_g": 0.9
+    },
+    {
+      "name": "Pineapple (1 cup chunks)",
+      "calorie_count": 82,
+      "protein_g": 0.9
+    },
+    {
+      "name": "Guava (1 medium)",
+      "calorie_count": 38,
+      "protein_g": 1.4
+    },
+    {
+      "name": "Pomegranate (1 cup arils)",
+      "calorie_count": 144,
+      "protein_g": 2.9
+    },
+    {
+      "name": "Papaya (1 cup chunks)",
+      "calorie_count": 62,
+      "protein_g": 0.7
+    },
+    {
+      "name": "Chikoo / Sapota (1 medium)",
+      "calorie_count": 70,
+      "protein_g": 0.4
+    },
+    {
+      "name": "Mosambi / Sweet Lime (1 medium)",
+      "calorie_count": 43,
+      "protein_g": 0.8
+    },
+    {
+      "name": "Strawberries (1 cup)",
+      "calorie_count": 49,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Dates (2 pieces)",
+      "calorie_count": 134,
+      "protein_g": 0.8
+    },
+    {
+      "name": "Figs / Anjeer (2 medium)",
+      "calorie_count": 74,
+      "protein_g": 0.7
+    },
+    {
+      "name": "Potato (Aloo)",
+      "calorie_count": 77,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Onion (Kanda)",
+      "calorie_count": 40,
+      "protein_g": 1.1
+    },
+    {
+      "name": "Tomato",
+      "calorie_count": 18,
+      "protein_g": 0.9
+    },
+    {
+      "name": "Cucumber (Kakdi)",
+      "calorie_count": 15,
+      "protein_g": 0.7
+    },
+    {
+      "name": "Carrot (Gajar)",
+      "calorie_count": 41,
+      "protein_g": 0.9
+    },
+    {
+      "name": "Cauliflower (Gobi)",
+      "calorie_count": 25,
+      "protein_g": 1.9
+    },
+    {
+      "name": "Cabbage (Kobi)",
+      "calorie_count": 25,
+      "protein_g": 1.3
+    },
+    {
+      "name": "Spinach (Palak)",
+      "calorie_count": 23,
+      "protein_g": 2.9
+    },
+    {
+      "name": "Okra / Lady's Finger (Bhindi)",
+      "calorie_count": 33,
+      "protein_g": 1.9
+    },
+    {
+      "name": "Brinjal / Eggplant (Vangi)",
+      "calorie_count": 25,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Bell Pepper / Capsicum (Shimla Mirch)",
+      "calorie_count": 20,
+      "protein_g": 0.9
+    },
+    {
+      "name": "Green Peas (Matar)",
+      "calorie_count": 81,
+      "protein_g": 5.4
+    },
+    {
+      "name": "Radish (Mooli)",
+      "calorie_count": 16,
+      "protein_g": 0.7
+    },
+    {
+      "name": "Beetroot",
+      "calorie_count": 43,
+      "protein_g": 1.6
+    },
+    {
+      "name": "Bottle Gourd (Dudhi / Lauki)",
+      "calorie_count": 14,
+      "protein_g": 0.6
+    },
+    {
+      "name": "Ridge Gourd (Turai)",
+      "calorie_count": 17,
+      "protein_g": 0.5
+    },
+    {
+      "name": "Bitter Gourd (Karela)",
+      "calorie_count": 17,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Pumpkin (Bhopla)",
+      "calorie_count": 26,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Sweet Potato (Ratale)",
+      "calorie_count": 86,
+      "protein_g": 1.6
+    },
+    {
+      "name": "Coriander Leaves (Kothimbir)",
+      "calorie_count": 23,
+      "protein_g": 2.1
+    },
+    {
+      "name": "Mint Leaves (Pudina)",
+      "calorie_count": 44,
+      "protein_g": 3.8
+    },
+    {
+      "name": "Paneer (Cottage Cheese)",
+      "calorie_count": 296,
+      "protein_g": 18.0
+    },
+    {
+      "name": "Tofu",
+      "calorie_count": 76,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Whole Milk",
+      "calorie_count": 60,
+      "protein_g": 3.3
+    },
+    {
+      "name": "Cheese (Amul Cube)",
+      "calorie_count": 320,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Ghee (1 tbsp)",
+      "calorie_count": 112,
+      "protein_g": 0.0
+    },
+    {
+      "name": "Butter (1 tbsp)",
+      "calorie_count": 102,
+      "protein_g": 0.1
+    },
+    {
+      "name": "Raw Toor Dal",
+      "calorie_count": 343,
+      "protein_g": 22.0
+    },
+    {
+      "name": "Raw Moong Dal",
+      "calorie_count": 347,
+      "protein_g": 24.0
+    },
+    {
+      "name": "Raw Masoor Dal",
+      "calorie_count": 352,
+      "protein_g": 24.0
+    },
+    {
+      "name": "Raw Chana Dal",
+      "calorie_count": 372,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Raw Urad Dal",
+      "calorie_count": 341,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Raw Chickpeas (Kabuli Chana)",
+      "calorie_count": 378,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Raw Kidney Beans (Rajma)",
+      "calorie_count": 333,
+      "protein_g": 24.0
+    },
+    {
+      "name": "Raw Peanuts (Shengdana)",
+      "calorie_count": 567,
+      "protein_g": 26.0
+    },
+    {
+      "name": "Almonds (Badam, 10 pieces)",
+      "calorie_count": 70,
+      "protein_g": 2.5
+    },
+    {
+      "name": "Walnuts (Akhrot, 4 halves)",
+      "calorie_count": 80,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Cashews (Kaju, 10 pieces)",
+      "calorie_count": 90,
+      "protein_g": 2.8
+    },
+    {
+      "name": "Sugar (1 tbsp)",
+      "calorie_count": 48,
+      "protein_g": 0.0
+    },
+    {
+      "name": "Jaggery (Gud, 1 tbsp)",
+      "calorie_count": 45,
+      "protein_g": 0.1
+    },
+    {
+      "name": "Bread (White, 1 slice)",
+      "calorie_count": 75,
+      "protein_g": 2.5
+    },
+    {
+      "name": "Bread (Brown, 1 slice)",
+      "calorie_count": 70,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Pav (1 piece)",
+      "calorie_count": 90,
+      "protein_g": 2.8
+    },
+    {
+      "name": "Cornflakes with milk (1 bowl)",
+      "calorie_count": 180,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Oats with milk (1 bowl)",
+      "calorie_count": 200,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Masala Oats (1 packet cooked)",
+      "calorie_count": 150,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Biscuit (Marie, 2 pieces)",
+      "calorie_count": 50,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Biscuit (Parle-G, 4 pieces)",
+      "calorie_count": 100,
+      "protein_g": 1.5
+    },
+    {
+      "name": "Jam (1 tbsp)",
+      "calorie_count": 50,
+      "protein_g": 0.1
+    },
+    {
+      "name": "Peanut Butter (1 tbsp)",
+      "calorie_count": 95,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Tomato Ketchup (1 tbsp)",
+      "calorie_count": 20,
+      "protein_g": 0.2
+    },
+    {
+      "name": "Sprouts Salad (1 bowl)",
+      "calorie_count": 120,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Amti (Maharashtrian Dal) (1 bowl)",
+      "calorie_count": 160,
+      "protein_g": 8.0
+    },
+    {
+      "name": "Kadhi (1 bowl)",
+      "calorie_count": 110,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Dhokla (2 pieces)",
+      "calorie_count": 150,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Khandvi (4-5 rolls)",
+      "calorie_count": 180,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Veg Cutlet (2 pieces)",
+      "calorie_count": 200,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Chicken Cutlet (2 pieces)",
+      "calorie_count": 280,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Chicken Soup (Clear, 1 bowl)",
+      "calorie_count": 80,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Tomato Soup (Creamy, 1 bowl)",
+      "calorie_count": 120,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Veg Clear Soup (1 bowl)",
+      "calorie_count": 50,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Sweet Corn Soup (1 bowl)",
+      "calorie_count": 150,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Manchow Soup (Veg, 1 bowl)",
+      "calorie_count": 130,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Hot and Sour Soup (Veg, 1 bowl)",
+      "calorie_count": 110,
+      "protein_g": 3.5
+    },
+    {
+      "name": "Shankarpali (Sweet, 5-6 pieces)",
+      "calorie_count": 180,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Chakli (2 pieces)",
+      "calorie_count": 150,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Chivda (1 bowl)",
+      "calorie_count": 250,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Ladoo (Besan, 1 piece)",
+      "calorie_count": 180,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Ladoo (Rava, 1 piece)",
+      "calorie_count": 160,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Barfi (Kaju Katli, 2 pieces)",
+      "calorie_count": 120,
+      "protein_g": 2.5
+    },
+    {
+      "name": "Barfi (Plain Mawa, 1 piece)",
+      "calorie_count": 150,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Sugarcane Juice (1 glass)",
+      "calorie_count": 180,
+      "protein_g": 0.2
+    },
+    {
+      "name": "Coconut Water (1 glass)",
+      "calorie_count": 45,
+      "protein_g": 1.7
+    },
+    {
+      "name": "Fresh Orange Juice (1 glass)",
+      "calorie_count": 110,
+      "protein_g": 1.5
+    },
+    {
+      "name": "Fresh Mosambi Juice (1 glass)",
+      "calorie_count": 90,
+      "protein_g": 1.2
+    },
+    {
+      "name": "Mango Milkshake (1 glass)",
+      "calorie_count": 250,
+      "protein_g": 7.0
+    },
+    {
+      "name": "Banana Milkshake (1 glass)",
+      "calorie_count": 220,
+      "protein_g": 7.5
+    },
+    {
+      "name": "Cold Coffee (1 glass)",
+      "calorie_count": 200,
+      "protein_g": 6.0
+    },
+    {
+      "name": "Solkadhi (1 glass)",
+      "calorie_count": 100,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Kombdi Vade (Chicken Curry with Vade) (1 serving)",
+      "calorie_count": 550,
+      "protein_g": 28.0
+    },
+    {
+      "name": "Aloo Wadi / Patra (2 pieces)",
+      "calorie_count": 180,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Kothimbir Vadi (2 pieces)",
+      "calorie_count": 160,
+      "protein_g": 5.0
+    },
+    {
+      "name": "Chicken Lollipop (4 pieces)",
+      "calorie_count": 300,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Chicken Shawarma (1 roll)",
+      "calorie_count": 400,
+      "protein_g": 22.0
+    },
+    {
+      "name": "Paneer Shawarma (1 roll)",
+      "calorie_count": 380,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Popcorn (Salted, 1 medium bag)",
+      "calorie_count": 350,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Potato Chips (1 medium packet)",
+      "calorie_count": 280,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Matki Usal (1 bowl)",
+      "calorie_count": 180,
+      "protein_g": 10.0
+    },
+    {
+      "name": "Zunka (1 serving)",
+      "calorie_count": 170,
+      "protein_g": 9.0
+    },
+    {
+      "name": "Chicken Kheema (1 serving)",
+      "calorie_count": 300,
+      "protein_g": 25.0
+    },
+    {
+      "name": "Masala Papad (1 piece)",
+      "calorie_count": 100,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Dahi Vada (2 pieces)",
+      "calorie_count": 250,
+      "protein_g": 9.0
+    },
+    {
+      "name": "Tamarind Chutney (1 tbsp)",
+      "calorie_count": 30,
+      "protein_g": 0.1
+    },
+    {
+      "name": "Mint-Coriander Chutney (1 tbsp)",
+      "calorie_count": 10,
+      "protein_g": 0.5
+    },
+    {
+      "name": "Coconut Chutney (2 tbsp)",
+      "calorie_count": 80,
+      "protein_g": 1.0
+    },
+    {
+      "name": "Chicken Seekh Kebab (2 pieces)",
+      "calorie_count": 180,
+      "protein_g": 18.0
+    },
+    {
+      "name": "Paneer Tikka (4 pieces)",
+      "calorie_count": 250,
+      "protein_g": 15.0
+    },
+    {
+      "name": "Aloo Tikki (2 pieces)",
+      "calorie_count": 220,
+      "protein_g": 4.0
+    },
+    {
+      "name": "Idiyappam / String Hoppers (3 pieces)",
+      "calorie_count": 150,
+      "protein_g": 3.0
+    },
+    {
+      "name": "Appam (1 piece)",
+      "calorie_count": 90,
+      "protein_g": 2.0
+    },
+    {
+      "name": "Chicken Stew (1 bowl)",
+      "calorie_count": 250,
+      "protein_g": 20.0
+    },
+    {
+      "name": "Vegetable Stew (1 bowl)",
+      "calorie_count": 150,
+      "protein_g": 4.0
+    }
+  ]
+}
